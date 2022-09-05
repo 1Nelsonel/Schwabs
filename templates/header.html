@@ -1,250 +1,173 @@
 {% load static %}
 
-<!-- HEADER -->
+<!-- Header -->
+<header id="header" class="header sticky--header">
 
-<header>
-    <div class="top-part__block">
-        <div class="search__box-block">
-            <div class="container">
-                <input type="text" id="search" class="input-sm form-full" placeholder="Search Now">
-                <a href="#!" class="search__close-btn"> <i class="fa fa-times" aria-hidden="true"></i> </a>
-            </div>
-        </div>
+    <!-- Header Top Area -->
+    <div class="header__top bg--blue">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-7">
-                    <p>
-                        Welcome to our corporate buisness
-                    </p>
-                </div>
-                <div class="col-sm-5">
-                    <div class="social-link__block text-right">
-                        <a href="#" class="facebook"> <i class="fa fa-facebook"></i> </a>
-                        <a href="#" class="twitter"> <i class="fa fa-twitter"></i> </a>
-                        <a href="#" class="google-plus"> <i class="fa fa-google-plus"></i> </a>
-                        <a href="#" class="linkedin"> <i class="fa fa-linkedin"></i> </a>
-
-                    </div>
+            <div class="header__top__inner">
+                <ul class="header__top__info">
+                    <li>
+                        <a href="#"><i class="fa fa-phone"></i>01354 568 787</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-envelope-o"></i> info@fsulting.com</a>
+                    </li>
+                </ul>
+                <div class="header__top__button">
+                    <a class="cr-btn cr-btn--lg" href="appointment.html">
+                        <span>Make an appointment</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="middel-part__block">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 logo col-md-12 d-flex align-items-center">
+    <!--// Header Top Area -->
 
-                    <a href="{% url 'home' %}"> <img src="{% static 'assets/images/logo.png' %}" alt="Logo"> </a>
-
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle hidden-lg-up" data-toggle="collapse"
-                            data-target="#navbar-menu">
-                            <i class="fa fa-bars"></i>
-                        </button>
-
-                    </div>
+    <!-- Header Bottom Area -->
+    <div class="header__bottom bg--white">
+        <div class="container d-none d-lg-block">
+            <div class="header__bottom__inner">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="{% static 'images/logo/logo-theme.png' %}" alt="header logo">
+                    </a>
                 </div>
-                <div class="col-lg-8 col-md-12">
-                    <div class="top-info__block text-right">
-                        <ul>
-                            <li>
-                                <i class="fa fa-map-marker"></i>
-                                <p>
-                                    13005 Greenvile Avenue
-                                    <span> California, TX 70240</span>
-                                </p>
-                            </li>
-                            <li>
-                                <i class="fa fa-phone"></i>
-                                <p>
-                                    Call Us
-                                    <span> +56 (0) 012 345 6789</span>
-                                </p>
-                            </li>
-                            <li>
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <p>
-                                    Mail Us
-                                    <span> <a href="mailto:info@gmail.com">info@gmail.com</a> </span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="main_nav stricky-header__top navbar-toggleable-md fixed-top">
 
-        <nav class="navbar navbar-default navbar-sticky bootsnav">
-            <div class="container">
-                <!-- Start Header Navigation -->
-
-                <!-- End Header Navigation -->
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav mobile-menu d-flex justify-content-between">
-                        <li>
-                            <a href="#!">Home</a>
-                            <span class="submenu-button"></span>
-                            <ul class="dropdown-menu">
+                <!-- Main Navigation -->
+                <nav id="main-navigation" class="header__menu main-navigation">
+                    <ul>
+                        <li class="cr-dropdown">
+                            <a href="index.html">HOME</a>
+                            <ul class="cr-dropdown-menu">
                                 <li>
-                                    <a href="index-2.html">Home Page 1</a>
-                                </li>
-
-                                <li>
-                                    <a href="index1.html">Home Page 2</a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#!">About us</a>
-                            <span class="submenu-button"></span>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="about.html">About</a>
+                                    <a href="index.html">Homepage Classic</a>
                                 </li>
                                 <li>
-                                    <a href="about2.html">About 2</a>
-                                </li>
-                                <li>
-                                    <a href="about3.html">About 3</a>
-                                </li>
-                                <li>
-                                    <a href="history.html">history</a>
-                                </li>
-                                <li>
-                                    <a href="career.html">career</a>
-                                </li>
-                                <li>
-                                    <a href="partnerships.html">partnerships</a>
-                                </li>
-                                <li>
-                                    <a href="leadership.html">leadership</a>
+                                    <a href="index-boxed-layout.html">Homepage Boxed Layout</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="javascript:avoid(0);">Services</a>
-                            <span class="submenu-button"></span>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="services.html">All Services</a>
-                                </li>
-                                <li>
-                                    <a href="services-details.html">Services Details</a>
-                                </li>
-
-                            </ul>
+                            <a href="about-us.html">ABOUT</a>
                         </li>
-                        <li>
-                            <a href="javascript:avoid(0);">Project</a>
-                            <span class="submenu-button"></span>
-                            <ul class="dropdown-menu">
+                        <li class="cr-dropdown">
+                            <a href="portfolio.html">PORTFOLIO</a>
+                            <ul class="cr-dropdown-menu">
                                 <li>
-                                    <a href="project.html">project</a>
-                                </li>
-
-                                <li>
-                                    <a href="project-details.html">Projec Details</a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="javascript:avoid(0);">blog</a>
-                            <span class="submenu-button"></span>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="blog.html">Blog</a>
+                                    <a href="portfolio.html">Portfolio Grid</a>
                                 </li>
                                 <li>
-                                    <a href="blog-detail.html">Blog Details</a>
+                                    <a href="portfolio-details.html">Portfolio Details</a>
                                 </li>
                             </ul>
                         </li>
-
-                        <li>
-                            <a href="javascript:avoid(0);">pages</a>
-                            <span class="submenu-button"></span>
-                            <ul class="dropdown-menu">
+                        <li class="cr-dropdown">
+                            <a href="services.html">SERVICE</a>
+                            <ul class="cr-dropdown-menu">
                                 <li>
-                                    <a href="portfolio-masonry.html">Gallery Masonry</a>
+                                    <a href="services.html">Services</a>
                                 </li>
                                 <li>
-                                    <a href="portfolio-grid.html">Gallery Grid</a>
+                                    <a href="single-service.html">Single Service</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cr-dropdown">
+                            <a href="#">PAGES</a>
+                            <ul class="cr-dropdown-menu">
+                                <li>
+                                    <a href="about-us.html">ABOUT</a>
+                                </li>
+                                <li>
+                                    <a href="blog.html">BLOG</a>
+                                    <ul class="cr-sub-dropdown-menu">
+                                        <li>
+                                            <a href="blog.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-with-right-sidebar.html">Blog With Right Sidebar</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-with-left-sidebar.html">Blog With Left Sidebar</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-details.html">Blog Details</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog-details-with-left-sidebar.html">Blog Details With Left Sidebar</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="features.html">FEATURES</a>
+                                </li>
+                                <li>
+                                    <a href="services.html">SERVICE</a>
+                                    <ul class="cr-sub-dropdown-menu">
+                                        <li>
+                                            <a href="services.html">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="single-service.html">Single Service</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="team.html">Team</a>
                                 </li>
-
                                 <li>
-                                    <a href="pricing.html">pricing</a>
+                                    <a href="team-details.html">Team Details</a>
                                 </li>
                                 <li>
-                                    <a href="faq.html">Faq</a>
+                                    <a href="appointment.html">Appointment</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="cr-dropdown">
+                            <a href="blog.html">BLOG</a>
+                            <ul class="cr-dropdown-menu">
+                                <li>
+                                    <a href="blog.html">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Register</a>
+                                    <a href="blog-with-right-sidebar.html">Blog With Right Sidebar</a>
                                 </li>
                                 <li>
-                                    <a href="login.html">login</a>
+                                    <a href="blog-with-left-sidebar.html">Blog With Left Sidebar</a>
                                 </li>
                                 <li>
-                                    <a href="testimonial.html">Testimonials</a>
+                                    <a href="blog-details.html">Blog Details</a>
                                 </li>
                                 <li>
-                                    <a href="404.html">404 Error</a>
-                                </li>
-                                <li>
-                                    <a href="blank.html">blank</a>
+                                    <a href="blog-details-with-left-sidebar.html">Blog Details With Left Sidebar</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#!">Shop</a>
-                            <span class="submenu-button"></span>
-                            <!-- Nav Dropdown -->
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="shop.html">Shop</a>
-                                </li>
-                                <li>
-                                    <a href="shop-sidebar.html">shop sidebar</a>
-                                </li>
-                                <li>
-                                    <a href="shop-details.html">shop details</a>
-                                </li>
-                                <li>
-                                    <a href="cart.html">cart</a>
-                                </li>
-                                <li>
-                                    <a href="checkout.html">Checkout</a>
-                                </li>
-                            </ul>
-                            <!-- End Nav Dropdown -->
-                        </li>
-                        <li>
-                            <a href="#!">Contact us</a>
-                            <span class="submenu-button"></span>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="contact.html">contact</a>
-                                </li>
-                                <li>
-                                    <a href="contact1.html">contact 2</a>
-                                </li>
-                            </ul>
+                            <a href="contact.html">CONTACT</a>
                         </li>
                     </ul>
-                </div>
-                <!--navbar-collapse -->
+                </nav>
+                <!--// Main Navigation -->
+
             </div>
-        </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="container d-block d-lg-none">
+            <div class="mobile-menu clearfix d-md-block d-lg-none">
+                <a class="mobile-logo" href="index.html">
+                    <img src="{% static 'images/logo/logo-theme.png' %}" alt="logo">
+                </a>
+            </div>
+        </div>
+        <!-- //Mobile Menu -->
+
     </div>
+    <!--// Header Bottom Area -->
+
 </header>
-
-
-<!-- END HEADER -->
+<!-- //Header -->
