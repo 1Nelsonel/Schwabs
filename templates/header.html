@@ -16,15 +16,15 @@
             <div class="header__top__inner">
                 <ul class="header__top__info">
                     <li>
-                        <a href="#"><i class="fa fa-phone"></i>01354 568 787</a>
+                        <a href="tel:+254724514281"><i class="fa fa-phone"></i>+254 724 514281</a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fa fa-envelope-o"></i> info@fsulting.com</a>
+                        <a href="mailto:info@shwabsbiomedix.co.ke">
+                            <i class="fa fa-envelope-o"></i> info@shwabsbiomedix.co.ke</a>
                     </li>
                 </ul>
                 <div class="header__top__button">
-                    <a class="cr-btn cr-btn--lg" href="appointment.html">
+                    <a class="cr-btn cr-btn--lg" href="{% url 'appointment' %}">
                         <span>Make an appointment</span>
                     </a>
                 </div>
@@ -38,7 +38,7 @@
         <div class="container d-none d-lg-block">
             <div class="header__bottom__inner">
                 <div class="header__logo">
-                    <a href="index.html">
+                    <a href="{% url 'home' %}">
                         <img src="{% static 'images/logo/schwabslogo.png' %}" width="170" height="50" alt="header logo">
                     </a>
                 </div>
@@ -46,41 +46,19 @@
                 <!-- Main Navigation -->
                 <nav id="main-navigation" class="header__menu main-navigation">
                     <ul>
-                        <li class="cr-dropdown">
-                            <a href="index.html">HOME</a>
-                            <ul class="cr-dropdown-menu">
-                                <li>
-                                    <a href="index.html">Homepage Classic</a>
-                                </li>
-                                <li>
-                                    <a href="index-boxed-layout.html">Homepage Boxed Layout</a>
-                                </li>
-                            </ul>
+                        <li>
+                            <a href="{% url 'home' %}">HOME</a>                           
                         </li>
                         <li>
-                            <a href="about-us.html">ABOUT</a>
+                            <a href="{% url 'about' %}">ABOUT</a>
                         </li>
-                        <li class="cr-dropdown">
+                        <li>
                             <a href="portfolio.html">PORTFOLIO</a>
-                            <ul class="cr-dropdown-menu">
-                                <li>
-                                    <a href="portfolio.html">Portfolio Grid</a>
-                                </li>
-                                <li>
-                                    <a href="portfolio-details.html">Portfolio Details</a>
-                                </li>
-                            </ul>
+                            
                         </li>
-                        <li class="cr-dropdown">
+                        <li >
                             <a href="services.html">SERVICE</a>
-                            <ul class="cr-dropdown-menu">
-                                <li>
-                                    <a href="services.html">Services</a>
-                                </li>
-                                <li>
-                                    <a href="single-service.html">Single Service</a>
-                                </li>
-                            </ul>
+                            
                         </li>
                         <li class="cr-dropdown">
                             <a href="#">PAGES</a>
