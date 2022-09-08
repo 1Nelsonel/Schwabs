@@ -16,3 +16,11 @@ def appointment(request):
 def about(request):
     context = {}
     return render(request, 'base/about.html', context)
+
+def service(request):
+    context = {}
+    return render(request, 'base/service.html', context)
+
+def blog(request):
+    context = {}
+    return render(request, 'base/blog.html', context)
