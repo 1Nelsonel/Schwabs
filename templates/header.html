@@ -5,6 +5,14 @@
         background-color: rgb(21, 199, 199) !important;
         border-color: rgb(21, 199, 199) !important;
     }
+
+    .header__top__info li a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
+
+    .main-navigation>ul>li:hover>a {
+        color: rgb(21, 199, 199) !important;
+    }
 </style>
 
 <!-- Header -->
@@ -47,95 +55,26 @@
                 <nav id="main-navigation" class="header__menu main-navigation">
                     <ul>
                         <li>
-                            <a href="{% url 'home' %}">HOME</a>                           
+                            <a href="{% url 'home' %}">HOME</a>
                         </li>
                         <li>
                             <a href="{% url 'about' %}">ABOUT</a>
                         </li>
-                        
-                        <li >
-                            <a href="services.html">SERVICE</a>
-                            
+
+                        <li>
+                            <a href="{% url 'service' %}">SERVICE</a>
+
                         </li>
 
                         <li>
-                            <a href="portfolio.html">Products</a>
-                            
-                        </li>
+                            <a href="{% url 'product' %}">PRODUCTS</a>
 
-                        <li class="cr-dropdown">
-                            <a href="#">PAGES</a>
-                            <ul class="cr-dropdown-menu">
-                                <li>
-                                    <a href="about-us.html">ABOUT</a>
-                                </li>
-                                <li>
-                                    <a href="blog.html">BLOG</a>
-                                    <ul class="cr-sub-dropdown-menu">
-                                        <li>
-                                            <a href="blog.html">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-with-right-sidebar.html">Blog With Right Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-with-left-sidebar.html">Blog With Left Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-details.html">Blog Details</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-details-with-left-sidebar.html">Blog Details With Left Sidebar</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="features.html">FEATURES</a>
-                                </li>
-                                <li>
-                                    <a href="services.html">SERVICE</a>
-                                    <ul class="cr-sub-dropdown-menu">
-                                        <li>
-                                            <a href="services.html">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="single-service.html">Single Service</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="team.html">Team</a>
-                                </li>
-                                <li>
-                                    <a href="team-details.html">Team Details</a>
-                                </li>
-                                <li>
-                                    <a href="appointment.html">Appointment</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="cr-dropdown">
-                            <a href="blog.html">BLOG</a>
-                            <ul class="cr-dropdown-menu">
-                                <li>
-                                    <a href="blog.html">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="blog-with-right-sidebar.html">Blog With Right Sidebar</a>
-                                </li>
-                                <li>
-                                    <a href="blog-with-left-sidebar.html">Blog With Left Sidebar</a>
-                                </li>
-                                <li>
-                                    <a href="blog-details.html">Blog Details</a>
-                                </li>
-                                <li>
-                                    <a href="blog-details-with-left-sidebar.html">Blog Details With Left Sidebar</a>
-                                </li>
-                            </ul>
                         </li>
                         <li>
-                            <a href="contact.html">CONTACT</a>
+                            <a href="{% url 'blog' %}">BLOG</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'contact' %}">CONTACT</a>
                         </li>
                     </ul>
                 </nav>
