@@ -24,3 +24,7 @@ def service(request):
 def blog(request):
     context = {}
     return render(request, 'base/blog.html', context)
+
+def product(request):
+    context = {}
+    return render(request, 'base/product.html', context)
