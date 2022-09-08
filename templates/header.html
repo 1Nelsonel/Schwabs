@@ -4,6 +4,10 @@
     .cr-btn {
         background-color: rgb(21, 199, 199) !important;
         border-color: rgb(21, 199, 199) !important;
+        color: black !important;
+    }
+    .cr-btn:hover {
+        color: white !important;
     }
 
     .header__top__info li a:hover {
@@ -86,7 +90,7 @@
         <!-- Mobile Menu -->
         <div class="container d-block d-lg-none">
             <div class="mobile-menu clearfix d-md-block d-lg-none">
-                <a class="mobile-logo" href="index.html">
+                <a class="mobile-logo" href="{% url 'home' %}">
                     <img src="{% static 'images/logo/schwabslogo.png' %}" height="50" width="150" alt="logo">
                 </a>
             </div>
