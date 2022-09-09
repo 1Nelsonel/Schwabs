@@ -2,7 +2,7 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
-from base.models import Appointment, Contact, Blog, Comment, Service
+from base.models import Appointment, Contact, Blog, Comment, Service, Product
 
 # Create your views here.
 def home(request):
@@ -40,11 +40,11 @@ def appointment(request):
             email=request.POST.get('email'),
             phone=request.POST.get('phone'),
             date=request.POST.get('date'),
-            subject=request.POST.get('subject'),
+            service=request.POST.get('service'),
             body=request.POST.get('body'),
         )
-        messages.success(request, 'Your message has been sent. Thank you!')
-        return redirect('contact')
+        messages.success(request, 'Your made an appointmenr. Thank you!')
+        return redirect('appointment')
     context = {'services': services}
     return render(request, 'base/appointment.html', context)
 
@@ -110,5 +110,10 @@ def blogSingle(request, pk):
     return render(request, 'base/blogSingle.html', context)
 
 def product(request):
-    context = {}
+    products = Product.objects.all()
+    paginator = Paginator(products, 9)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {'products': products, 'page_obj': page_obj}
     return render(request, 'base/product.html', context)
