@@ -1,5 +1,18 @@
 {% load static %}
 
+<style>
+    .footer-area li a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
+    .footer-area li a {
+        color: white !important;
+    }
+
+    /* footer--widgets>ul>li>a {
+        color: white !important;
+    } */
+</style>
+
 <!-- Footer Area -->
 <footer id="footer" class="footer-area fixed--footer">
 
@@ -11,11 +24,12 @@
                 <!-- Single Widget -->
                 <div class="widget widget-about">
                     <div class="footer-area__logo">
-                        <a href="index.html">
-                            <img src="{% static 'images/logo/logo-footer.png' %}" alt="footer logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'images/logo/schwabslogo.png' %}" width="170" height="50" alt="footer logo">
                         </a>
                     </div>
-                    <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium oloremque laudantium, totam rem
+                    <p class="text-light">Perspiciatis unde omnis iste natus error sit voluptatem accusantium oloremque laudantium, totam
+                        rem
                         onsectetur sires
                         to obtain pain of itself because</p>
                     <div class="social-icons social-icons--rounded">
@@ -69,25 +83,7 @@
                 <!--// Single Widget -->
 
                 <!-- Single Widget -->
-                <div class="widget widget-twitter-feed">
-                    <h5 class="widget-title">Twitter Feed</h5>
-                    <ul>
-                        <li>
-                            <p>
-                                <a href="#">@Alex Smith</a>, unde omnis te us error sit voluptatem</p>
-                            <span class="time">
-                                <a href="#">10 Mins ago</a>
-                            </span>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="#">@Justin Bieber</a>, unde omnis te us error sit voluptatem</p>
-                            <span class="time">
-                                <a href="#">12 Mins ago</a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+                
                 <!--// Single Widget -->
 
                 <!-- Single Widget -->
@@ -95,22 +91,21 @@
                     <h5 class="widget-title">Contact Info</h5>
                     <ul>
                         <li>
-                            <p>256 Notrh Tower, Western City Mid Town, Las Vagas, USA</p>
+                            <p class="text-light">Saito centre, Mezzanine door in Eldoret 
+                                Kenya.</p>
                         </li>
                         <li>
                             <p>
-                                <a href="callto://+00812568987789">+008 12568 987 789</a>
+                                <a class="text-light" href="tel:+254724514281">+254 724 514281</a>
                             </p>
-                            <p>
-                                <a href="callto://+00835687567458">+008 35687 567 458</a>
-                            </p>
+                           
                         </li>
                         <li>
                             <p>
-                                <a href="mailto://info@fsulting.com">info@fsulting.com</a>
+                                <a class="text-light" href="mailto:info@schwabsbiomedix.co.ke">info@schwabsbiomedix.co.ke</a>
                             </p>
                             <p>
-                                <a href="mailto://info@fsulting.com">www.fsulting.com</a>
+                                <a class="text-light" href="https://schwabsbiomedix.co.ke">https://schwabsbiomedix.co.ke</a>
                             </p>
                         </li>
                     </ul>

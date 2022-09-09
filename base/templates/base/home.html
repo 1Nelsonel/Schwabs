@@ -28,9 +28,11 @@
 
         background: rgb(21, 199, 199) !important;
     }
-    .funfact-area:before  {
+
+    .funfact-area:before {
         background: rgb(21, 199, 199) !important;
     }
+
     .feature:before {
         background: rgb(21, 199, 199) !important;
     }
@@ -43,14 +45,13 @@
         <!-- Single Banner -->
         <div class="banner__single bg-image--1" data-black-overlay="6">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-9">
                         <div class="banner__single__content">
-                            <h1>WE ARE EXPERT IN <span class="color--theme">BUSINESS CONSULTATION</span></h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi tenetur
-                                suscipit voluptatibus
-                                iure culpa recusandae nisi dignissimos.</p>
-                            <a href="contact.html" class="cr-btn">
+                            <h1>Schwabs <span class="color--theme">Bromedix ltd</span></h1>
+                            <p>Supplier of Hospital Equipment,
+                                Laboratory Diagnostics and Reagents</p>
+                            <a href="{% url 'contact' %}" class="cr-btn">
                                 <span>Contact Now</span>
                             </a>
                         </div>
@@ -66,11 +67,10 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-9 col-lg-11">
                         <div class="banner__single__content text-center">
-                            <h1><span class="color--theme">FINANCIAL CONSULTING</span> EXPERT</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi tenetur
-                                suscipit voluptatibus
-                                iure culpa recusandae nisi dignissimos.</p>
-                            <a href="contact.html" class="cr-btn">
+                            <h1>Schwabs <span class="color--theme">Bromedix ltd</span></h1>
+                            <p>Supplier of Hospital Equipment,
+                                Laboratory Diagnostics and Reagents</p>
+                            <a href="{% url 'contact' %}" class="cr-btn">
                                 <span>Contact Now</span>
                             </a>
                         </div>
@@ -86,12 +86,10 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-9 col-lg-11">
                         <div class="banner__single__content text-center">
-                            <h3>ARE YOU WORRIED ABOUT YOUR BUSINESS?</h3>
-                            <h1>WE ARE EXPERT IN <span class="color--theme">CONSULTING</span></h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi tenetur
-                                suscipit voluptatibus
-                                iure culpa recusandae nisi dignissimos.</p>
-                            <a href="contact.html" class="cr-btn">
+                            <h1>Schwabs <span class="color--theme">Bromedix ltd</span></h1>
+                            <p>Supplier of Hospital Equipment,
+                                Laboratory Diagnostics and Reagents</p>
+                            <a href="{% url 'contact' %}" class="cr-btn">
                                 <span>Contact Now</span>
                             </a>
                         </div>
@@ -115,33 +113,37 @@
                 <div class="col-lg-6">
                     <div class="about-area__content">
                         <h4>WE ARE
-                            <span class="color--theme">Fsulting</span>
+                            <span class="color--theme">Schwabs Bromedix ltd</span>
                         </h4>
-                        <h3 class="cd-headline cx-heading slide">BEST FINANCIAL ADVISOR FOR YOUR
+                        <h3 class="cd-headline cx-heading slide">Supplier of
+
                             <span class="color--theme cd-words-wrapper cd-words-wrapper-2">
-                                <b class="is-visible">FUTURE</b>
-                                <b>BUSINESS</b>
-                                <b>SUCCESS</b>
+                                <b class="is-visible">Hospital Equipment,</b>
+                                <b>Laboratory Diagnostics,</b>
+                                <b>Laboratory Reagents</b>
                             </span>
-                            TO GROWUP
+
                         </h3>
-                        <p>Parchitect beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur aut
-                            odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                            nesciunt.</p>
-                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem
-                            aperiam, eaque ipsa quae </p>
-                        <a href="about-us.html" class="cr-btn">
+                        <p>Schwabs Bromedix ltd is a fully registered company under the Laws of Kenya
+                            companies act(cap 486). It was registered in March 2021 under certicate number
+                            PVT-PJUvzLXG.
+                            Our company's Head office is situated at Saito centre, Mezzanine door in Eldoret
+                            Kenya.</p>
+                        <p>We supply hospital equipment, laboratory diagnostics and reagents to both
+                            private and public sectors in Kenya through our dedicated sales personnel and
+                            appointed agents.</p>
+                        <p>Our mission focuses on improving the lives of those we serve through providing
+                            compassionate care, quality equipment and exceptional customer service.
+                            We endeavor to add value to our clients and exceed their expectations with the
+                            services we offer. </p>
+                        <a href="{% url 'about' %}" class="cr-btn">
                             <span>Read More</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="videopopup-box">
-                        <img src="{% static 'images/videobox/videobox-image-1.jpg' %}" alt="video popup image">
-                        <a href="https://www.youtube.com/embed/AHJVDFop9sU" class="video-btn">
-                            <i class="pe-7s-play"></i>
+                        <img src="{% static 'images/videobox/videobox-image-1.jpg' %}" alt="popup image">
                         </a>
                     </div>
                 </div>
@@ -156,7 +158,7 @@
 
             <!-- Single Feature -->
             <div class="col-lg-4 col-12">
-                <div class="feature" data-bgimage="{% static 'images/feature/feature-thumb-1.jpg' %}">
+                <div class="feature" data-bgimage="{% static 'images/feature/feature-thumb-1.jpg' %}" alt="">
                     <div class="feature__icon">
                         <span>
                             <i class="flaticon-shield"></i>
@@ -167,11 +169,11 @@
                     </div>
                     <div class="feature__content">
                         <h4 class="wow fadeInUp">
-                            <a href="features.html">ENSURE SECURITY</a>
+                            <a href="features.html">Experienced</a>
                         </h4>
-                        <p class="wow fadeInUp" data-wow-delay="0.15s">Perspiciatis unde omnis ist natus error sit
-                            voluptatem
-                            accusantium loremque tium totam rem aperiam eaque </p>
+                        <p class="wow fadeInUp" data-wow-delay="0.15s">
+
+                            We have a wide experience in interior design which guarantees you value for your money.</p>
                     </div>
                 </div>
             </div>
@@ -190,11 +192,13 @@
                     </div>
                     <div class="feature__content">
                         <h4 class="wow fadeInUp">
-                            <a href="features.html">EXPERT TEAM</a>
+                            <a href="features.html">Competitive Rates</a>
                         </h4>
-                        <p class="wow fadeInUp" data-wow-delay="0.15s">Perspiciatis unde omnis ist natus error sit
-                            voluptatem
-                            accusantium loremque tium totam rem aperiam eaque </p>
+                        <p class="wow fadeInUp" data-wow-delay="0.15s">
+
+                            We offer quality interior design services to all our clients at affordable pocket friendly
+                            rates.m nibhutis.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -215,9 +219,9 @@
                         <h4 class="wow fadeInUp">
                             <a href="features.html">24/7 LIVE SUPPORT</a>
                         </h4>
-                        <p class="wow fadeInUp" data-wow-delay="0.15s">Perspiciatis unde omnis ist natus error sit
-                            voluptatem
-                            accusantium loremque tium totam rem aperiam eaque </p>
+                        <p class="wow fadeInUp" data-wow-delay="0.15s">
+                            You can get into contact with us and we will offer you free advice on your dream designs.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -237,9 +241,8 @@
                         <h2>PROVIDE BEST
                             <span class="color--theme">SERVICES</span>
                         </h2>
-                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem
-                            aperiam, eaque ipsa quae</p>
+                        <p>Supplier of Hospital Equipment,
+                            Laboratory Diagnostics and Reagents</p>
                     </div>
                 </div>
             </div>
@@ -253,7 +256,7 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html">INSURANCE CONSULTING</a>
+                                <a href="single-service.html"> Medical equipment</a>
                             </h5>
                             <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
                                 rem per </p>
@@ -270,7 +273,7 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html">FINANCING PLAN</a>
+                                <a href="single-service.html">Non- pharmaceuticals</a>
                             </h5>
                             <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
                                 rem per </p>
@@ -287,7 +290,7 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html">BUSINESS DEAL</a>
+                                <a href="single-service.html">Laboratory diagnostics and reagents</a>
                             </h5>
                             <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
                                 rem per </p>
@@ -304,7 +307,7 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html">CAR INSURANCE</a>
+                                <a href="single-service.html">Physiotherapy equipment</a>
                             </h5>
                             <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
                                 rem per </p>
@@ -321,7 +324,7 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html">BUSINESS INSURANCE</a>
+                                <a href="single-service.html">Consultancy </a>
                             </h5>
                             <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
                                 rem per </p>
@@ -338,7 +341,23 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html">INVESMENT PLANING</a>
+                                <a href="single-service.html"> Health data/ IT</a>
+                            </h5>
+                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
+                                rem per </p>
+                        </div>
+                    </div>
+                </div>
+                <!--// Single Service -->
+                 <!-- Single Service -->
+                 <div class="col-lg-4 col-md-6 col-12 wow flipInX">
+                    <div class="service">
+                        <div class="service__icon">
+                            <i class="flaticon-risk"></i>
+                        </div>
+                        <div class="service__content">
+                            <h5>
+                                <a href="single-service.html"> Maintenance of equipment</a>
                             </h5>
                             <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
                                 rem per </p>
@@ -352,123 +371,7 @@
     </section>
     <!--// Service Area -->
 
-    <!-- Portfolio Area -->
-    <div id="portfolio-area" class="portfolio-area bg--grey section-padding--xlg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
-                    <div class="section-title text-center">
-                        <h4>OUR WORKS</h4>
-                        <h2>EXPLORE OUR
-                            <span class="color--theme">WORK</span>
-                        </h2>
-                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem
-                            aperiam, eaque
-                            ipsa quae</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="portfolio-filters text-center">
-                        <button class="is-active" data-filter="*">All</button>
-                        <button data-filter=".filter-recent">Recent</button>
-                        <button data-filter=".filter-running">Running</button>
-                        <button data-filter=".filter-completed">Completed</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row portfolio-wrap portfolio-gallery-active">
-
-                <div class="col-lg-4 col-md-6 col-12 portfolio-item filter-recent filter-running">
-                    <div class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="{% static 'images/portfolio/portfolio-image-1.jpg' %}" alt="portofolio image">
-                        </div>
-                        <div class="portfolio-content">
-                            <h5><a href="portfolio-details.html">Necessitatibus blanditiis.</a></h5>
-                            <h6>Recent</h6>
-                        </div>
-                        <a href="{% static 'images/portfolio/lg/portfolio-image-lg-1.jpg' %}"
-                            class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 portfolio-item filter-running filter-completed">
-                    <div class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="{% static 'images/portfolio/portfolio-image-2.jpg' %}" alt="portofolio image">
-                        </div>
-                        <div class="portfolio-content">
-                            <h5><a href="portfolio-details.html">Necessitatibus blanditiis.</a></h5>
-                            <h6>Recent</h6>
-                        </div>
-                        <a href="{% static 'images/portfolio/lg/portfolio-image-lg-2.jpg' %}"
-                            class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 portfolio-item filter-completed">
-                    <div class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="{% static 'images/portfolio/portfolio-image-3.jpg' %}" alt="portofolio image">
-                        </div>
-                        <div class="portfolio-content">
-                            <h5><a href="portfolio-details.html">Necessitatibus blanditiis.</a></h5>
-                            <h6>Recent</h6>
-                        </div>
-                        <a href="{% static 'images/portfolio/lg/portfolio-image-lg-3.jpg' %}"
-                            class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 portfolio-item filter-recent">
-                    <div class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="{% static 'images/portfolio/portfolio-image-4.jpg' %}" alt="portofolio image">
-                        </div>
-                        <div class="portfolio-content">
-                            <h5><a href="portfolio-details.html">Necessitatibus blanditiis.</a></h5>
-                            <h6>Recent</h6>
-                        </div>
-                        <a href="{% static 'images/portfolio/lg/portfolio-image-lg-4.jpg' %}"
-                            class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 portfolio-item filter-recent filter-completed">
-                    <div class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="{% static 'images/portfolio/portfolio-image-5.jpg' %}" alt="portofolio image">
-                        </div>
-                        <div class="portfolio-content">
-                            <h5><a href="portfolio-details.html">Necessitatibus blanditiis.</a></h5>
-                            <h6>Recent</h6>
-                        </div>
-                        <a href="{% static 'images/portfolio/lg/portfolio-image-lg-5.jpg' %}"
-                            class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 portfolio-item filter-running">
-                    <div class="portfolio">
-                        <div class="portfolio-image">
-                            <img src="{% static 'images/portfolio/portfolio-image-6.jpg' %}" alt="portofolio image">
-                        </div>
-                        <div class="portfolio-content">
-                            <h5><a href="portfolio-details.html">Necessitatibus blanditiis.</a></h5>
-                            <h6>Recent</h6>
-                        </div>
-                        <a href="{% static 'images/portfolio/lg/portfolio-image-lg-6.jpg' %}"
-                            class="portfolio-zoomicon"><i class="pe-7s-search"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!--// Portfolio Area -->
+    
 
     <!-- Team Area -->
     <section id="team-area" class="advisor-area bg--white section-padding--xlg">
@@ -480,10 +383,7 @@
                         <h2>MEET OUR
                             <span class="color--theme">TEAM MEMBERS</span>
                         </h2>
-                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem
-                            aperiam, eaque
-                            ipsa quae</p>
+                        <p>We are a qualified personnel who will give you best service.</p>
                     </div>
                 </div>
             </div>
@@ -494,7 +394,7 @@
                     <figure class="team">
                         <div class="team__header">
                             <div class="team__image">
-                                <img src="{% static 'images/team/team-member-1.jpg' %}" alt="team member thumb">
+                                <img src="{% static 'images/team/kollum.jpg' %}" height="400" width="100%" alt="team member thumb">
                             </div>
                             <div class="team__social">
                                 <ul>
@@ -522,7 +422,7 @@
                     <figure class="team">
                         <div class="team__header">
                             <div class="team__image">
-                                <img src="{% static 'images/team/team-member-2.jpg' %}" alt="team member thumb">
+                                <img src="{% static 'images/team/rotich.jpg' %}" height="400" width="100%" alt="team member thumb">
                             </div>
                             <div class="team__social">
                                 <ul>
@@ -545,33 +445,7 @@
                 </div>
                 <!--// Single Advisor -->
 
-                <!-- Single Advisor -->
-                <div class="col-lg-4 col-md-6 col-12">
-                    <figure class="team">
-                        <div class="team__header">
-                            <div class="team__image">
-                                <img src="{% static 'images/team/team-member-3.jpg' %}" alt="team member thumb">
-                            </div>
-                            <div class="team__social">
-                                <ul>
-                                    <li class="facebook"><a href="https://www.facebook.com/"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                    <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                                    </li>
-                                    <li class="google-plus"><a href="https://plus.google.com/"><i
-                                                class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <figcaption class="team__content">
-                            <h5>
-                                <a href="team-details.html">Roberto Carlos</a>
-                            </h5>
-                            <p>Assistant Manager</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!--// Single Advisor -->
+                
 
             </div>
         </div>
@@ -664,60 +538,37 @@
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>Reachable and flexible in all aspect of Business</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>You get value for money with Schwabs biomedixs, best quality products</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>Best customer client relation, you are the best.</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>you offer friendly and affordable prices for laboratory equipment</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>Best service in biomedixs Consultancy</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur aut
-                                    odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                                    nesciunt. Neque porro</p>
+                                <p>Best service provider for biomedixs supplies</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
@@ -730,7 +581,7 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="{% static 'images/testimonial/testimonial-author-1.png' %}"
+                                    <img src="{% static 'images/testimonial/user.png' %}"
                                         alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
@@ -743,7 +594,7 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="{% static 'images/testimonial/testimonial-author-2.png' %}"
+                                    <img src="{% static 'images/testimonial/user.png' %}"
                                         alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
@@ -756,7 +607,7 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="{% static 'images/testimonial/testimonial-author-3.png' %}"
+                                    <img src="{% static 'images/testimonial/user.png' %}"
                                         alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
@@ -769,7 +620,7 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="{% static 'images/testimonial/testimonial-author-1.png' %}"
+                                    <img src="{% static 'images/testimonial/user.png' %}"
                                         alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
@@ -782,7 +633,7 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="{% static 'images/testimonial/testimonial-author-2.png' %}"
+                                    <img src="{% static 'images/testimonial/user.png' %}"
                                         alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
@@ -795,7 +646,7 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="{% static 'images/testimonial/testimonial-author-3.png' %}"
+                                    <img src="{% static 'images/testimonial/user.png' %}"
                                         alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
