@@ -4,6 +4,165 @@
 
 {% load static %}
 
+<style>
+    #cr-breadcrumb-area {
+        background-color: rgb(21, 199, 199) !important;
+    }
 
+    .color--theme {
+        color: rgb(21, 199, 199) !important;
+    }
+
+    .video-btn {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .service__icon {
+        color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__header {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__image:before {
+
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .funfact-area:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .feature:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .cr-btn {
+        background-color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+        color: black !important;
+    }
+
+    .cr-btn:hover {
+        color: white !important;
+    }
+
+    a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
+
+    .text-color {
+        color: rgb(21, 199, 199) !important;
+    }
+</style>
+
+<!-- Breadcrumb Area -->
+<div id="funfact-area" class="funfact-area section-padding--lg bg--white bg-image--1" data-overlay="8">
+    <div class="container">
+        <div class="cr-breadcrumb">
+            <div class="cr-breadcrumb__left">
+                <h2>Appointment</h2>
+                <p>Schwabs Biomedixs ltd</p>
+            </div>
+            <div class="cr-breadcrumb__right">
+                <ul class="cr-breadcrumb__pagination">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>Appointment</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- Appointment -->
+    <div class="appointment bg--white section-padding--xlg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0 mt-10-reverse">
+                    <div class="pg-appintment">
+                        <div class="pg-appintment__title text-center">
+                            <h2 class="text-color">MAKE AN APPOINTMENT</h2>
+                        </div>
+                        <div class="pg-appintment__box">
+                            <div class="p-2">
+                                {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                    <li {% if message.tags %} class="{{ message.tags }} bg-success text-center text-light p-2 rounded-pill" {% endif %}>{{ message }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                                </div>
+                            <form id="contact-form" method="POST">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <input type="text" name="fname" id="user-first-name" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <input type="text" name="lname" id="user-last-name" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <input type="email" name="email" id="user-email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <input type="text" name="phone" id="user-phone" placeholder="Phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <select class="select2-another" name="service" id="user-select-advisor">
+                                                <option value="">--select service--</option>
+                                                {% for service in services %}
+                                                <option value="{{service.name}}">{{service.name}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <input type="text" name="date" id="user-select-date" placeholder="Select Date" data-select="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="single-input">
+                                            <textarea name="body" cols="30" rows="5" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="single-input button">
+                                            <button type="submit" class="cr-btn"><span>Submit</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <p class="form-message"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Appointment -->
+
+   
+
+</main>
+<!-- //Page Conent -->
 
 {% endblock %}

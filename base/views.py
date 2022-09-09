@@ -17,11 +17,35 @@ def home(request):
     return render(request, 'base/home.html', context)
 
 def contact(request):
+    if request.method == 'POST':
+        contact = Contact.objects.create(
+            name=request.POST.get('name'),
+            email=request.POST.get('email'),
+            phone=request.POST.get('phone'),
+            subject=request.POST.get('subject'),
+            body=request.POST.get('body'),
+        )
+        messages.success(request, 'Your message has been sent. Thank you!')
+        return redirect('contact')
     context = {}
     return render(request, 'base/contact.html', context)
 
 def appointment(request):
-    context = {}
+    services = Service.objects.all()
+
+    if request.method == 'POST':
+        appointment = Appointment.objects.create(
+            fname=request.POST.get('fname'),
+            lname=request.POST.get('lname'),
+            email=request.POST.get('email'),
+            phone=request.POST.get('phone'),
+            date=request.POST.get('date'),
+            subject=request.POST.get('subject'),
+            body=request.POST.get('body'),
+        )
+        messages.success(request, 'Your message has been sent. Thank you!')
+        return redirect('contact')
+    context = {'services': services}
     return render(request, 'base/appointment.html', context)
 
 def about(request):
