@@ -652,7 +652,7 @@
             <div class="row justify-content-center mt-30-reverse">
 
                 <!-- Single Blog -->
-                {% for blog in page_obj %}
+                {% for blog in blog_obj %}
                 <div class="col-lg-4 col-md-6 col-12">
                     <article class="blog sticky">
                         <div class="blog__thumb">
@@ -688,15 +688,15 @@
                 <div class="col-lg-12">
                     <div class="cr-pagination text-center">
                         <ul>
-                            {% if page_obj.has_previous %}
-                            <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+                            {% if blog_obj.has_previous %}
+                            <li><a href="?page={{ blog_obj.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
                             {% endif %}
-                            <li class="active"><a href="#">{{ page_obj.number }}</a></li>
+                            <li class="active"><a href="#">{{ blog_obj.number }}</a></li>
                             <!-- <li><a href="blog-with-right-sidebar.html">2</a></li>
                             <li><a href="blog-with-right-sidebar.html">3</a></li>
                             <li><a href="blog-with-right-sidebar.html">4</a></li> -->
                             {% if page_obj.has_next %}
-                            <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+                            <li><a href="?page={{ blog_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
                             {% endif %}
                         </ul>
                     </div>
