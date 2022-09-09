@@ -4,6 +4,75 @@
 
 {% load static %}
 
+<style>
+    #cr-breadcrumb-area {
+        background-color: rgb(21, 199, 199) !important;
+    }
 
+    .color--theme {
+        color: rgb(21, 199, 199) !important;
+    }
+
+    .video-btn {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .service__icon {
+        color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__header {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__image:before {
+
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .funfact-area:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .feature:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .cr-btn {
+        background-color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+        color: black !important;
+    }
+
+    .cr-btn:hover {
+        color: white !important;
+    }
+
+    a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
+</style>
+
+<!-- Breadcrumb Area -->
+<div id="funfact-area" class="funfact-area section-padding--lg bg--white bg-image--1" data-overlay="8">
+    <div class="container">
+        <div class="cr-breadcrumb">
+            <div class="cr-breadcrumb__left">
+                <h2>Blogs</h2>
+                <p>Schwabs Biomedixs ltd</p>
+            </div>
+            <div class="cr-breadcrumb__right">
+                <ul class="cr-breadcrumb__pagination">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>Blogs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Breadcrumb Area -->
 
 {% endblock %}

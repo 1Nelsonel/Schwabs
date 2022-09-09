@@ -1,0 +1,238 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    #cr-breadcrumb-area {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .color--theme {
+        color: rgb(21, 199, 199) !important;
+    }
+
+    .video-btn {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .service__icon {
+        color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__header {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__image:before {
+
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .funfact-area:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .feature:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .cr-btn {
+        background-color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+        color: black !important;
+    }
+
+    .cr-btn:hover {
+        color: white !important;
+    }
+
+    a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
+</style>
+
+<!-- Breadcrumb Area -->
+<div id="funfact-area" class="funfact-area section-padding--lg bg--white bg-image--1" data-overlay="8">
+    <div class="container">
+        <div class="cr-breadcrumb">
+            <div class="cr-breadcrumb__left">
+                <h2>Blog Details</h2>
+                <p>Schwabs Biomedixs ltd</p>
+            </div>
+            <div class="cr-breadcrumb__right">
+                <ul class="cr-breadcrumb__pagination">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>Blog Detail</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- BLogs grid -->
+    <div class="cr-section pg-blogs-area section-padding--xlg bg--white">
+        <div class="container">
+            <div class="row">
+
+                <!-- BLog Details -->
+                <div class="col-lg-8">
+                    <article class="pg-blog">
+                        <div class="pg-blog-thumb">
+                            <img src="{{blog.image.url}}"  width="100%" height="500" alt="blog details thumb">
+                        </div>
+                        <div class="pg-blog-main">
+                            <h2 class="pg-blog-title">{{blog.title}}</h2>
+                            <ul class="pg-blog-meta">
+                                <li>{{blog.created | timesince}} :ago</li>
+                                <li><a href="#">{{blog.host}}</a></li>
+                                <li><a href="#"> comments</a></li>
+                            </ul>
+                            <div class="pg-blog-content clearfix">
+                                <p>{{blog.description}}</p>
+                                
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <div class="pg-blog-block pg-blog-social">
+                        <div class="pg-blog-social-icons">
+                            <h6>Share: </h6>
+                            <div class="social-icons social-icons--rounded-color">
+                                <ul>
+                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="pg-blog-block commentlist">
+                        <h4 class="small-title">Comments</h4>
+                        {% for comment in comments %}
+                        <div class="comment">
+                            <div class="pg-blog-authoriamge">
+                                <img src="{% static 'images/testimonial/user.png' %}" width="20" height="60" alt="author image">
+                            </div>
+                            <div class="comment__content">
+                                <div class="comment__content__top">
+                                    <h6>{{comment.user}}</h6>
+                                    <span>{{comment.created | timesince}} :ago</span>
+                                </div>
+                                <div class="comment__content__bottom">
+                                    {{comment.body}}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                    <div class="pg-blog-block commentbox">
+                        <h4 class="small-title">Leave a Comment</h4>
+                        {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                <li {% if message.tags %}
+                                    class="{{ message.tags }} bg-success text-center text-light p-2 rounded-pill" {% endif %}>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single-input">
+                                        <label for="commenter-name">Name</label>
+                                        <input type="text" name="user" id="commenter-name" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single-input">
+                                        <label for="commenter-email">Email</label>
+                                        <input type="email" name="email" id="commenter-email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single-input">
+                                        <label for="commenter-message">Message</label>
+                                        <textarea name="body" id="commenter-message" required cols="30"
+                                            rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="single-input">
+                                        <button type="submit" class="cr-btn"><span>Send Now</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--// BLog Details -->
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="widgets sidebar-widgets">
+                        <!-- Single Widget -->
+                        <section class="single-widget widget-recentpost">
+                            <h6>Recent Post</h6>
+                            <ul>
+                                {% for blog in blogs %}
+                                <li>
+                                    <a class="widget-recentpost__thumb" href="{% url 'blogSingle' blog.id %}"><img
+                                            src="{{blog.image.url}}" width="90" height="50" alt="blog thumbnail"></a>
+                                    <div class="widget-recentpost__content">
+                                        <span class="date">{{blog.created | timesince}} : ago</span>
+                                        <h6><a href="{% url 'blogSingle' blog.id %}">{{blog.title}}</a></h6>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </section>
+                        <!--// Single Widget -->
+
+                        <!-- Single Widget -->
+                        <section class="single-widget widget-categories">
+                            <h6>Our Services</h6>
+                            <ul>
+                                {% for service in services %}
+                                <li><a href="{% url 'serviceSingle' service.id %}">{{service.name}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </section>
+                        <!--// Single Widget -->
+
+                        <!-- Single Widget -->
+                        <section class="single-widget widget-social-icon">
+                            <h6>Social Icons</h6>
+                            <ul>
+                                <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li class="pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li class="vimeo"><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                            </ul>
+                        </section>
+                        <!--// Single Widget -->
+                    </div>
+                </div>
+                <!--// Sidebar -->
+
+            </div>
+        </div>
+    </div>
+    <!--// BLogs grid -->
+
+</main>
+<!-- //Page Conent -->
+
+{% endblock %}

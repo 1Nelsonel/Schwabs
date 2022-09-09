@@ -7,7 +7,13 @@ from base.models import Appointment, Contact, Blog, Comment, Service
 # Create your views here.
 def home(request):
     services = Service.objects.all()
-    context = {'services': services}
+    blogs = Blog.objects.all()
+    paginator = Paginator(blogs, 3)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {'services': services, 'blogs': blogs, 'page_obj': page_obj}
     return render(request, 'base/home.html', context)
 
 def contact(request):
@@ -46,8 +52,38 @@ def serviceSingle(request, pk):
     return render(request, 'base/serviceSingle.html', context)
 
 def blog(request):
-    context = {}
+    blogs = Blog.objects.all()
+    paginator = Paginator(blogs, 6)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    comments = Comment.objects.all()
+    services = Service.objects.all()
+
+    context = {'blogs': blogs, 'services': services, 'comments': comments, 'page_obj': page_obj}
     return render(request, 'base/blog.html', context)
+
+def blogSingle(request, pk):
+    blog = Blog.objects.get(id=pk)
+    services = Service.objects.all()
+    comments = blog.comment_set.all()
+    blogs = Blog.objects.all()
+    
+
+    if request.method == 'POST':
+        comment = Comment.objects.create(
+            blog=blog,
+            user=request.POST.get('user'),
+            email=request.POST.get('email'),
+            body=request.POST.get('body'),
+        )
+
+        messages.success(request, 'Comment sent')
+        return redirect('blogSingle', pk=blog.id)
+
+    context = {'blog': blog, 'services': services, 'comments': comments, 'blogs': blogs}
+    return render(request, 'base/blogSingle.html', context)
 
 def product(request):
     context = {}
