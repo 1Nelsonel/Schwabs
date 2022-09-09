@@ -249,6 +249,7 @@
             <div class="row">
 
                 <!-- Single Service -->
+                {% for service in services %}
                 <div class="col-lg-4 col-md-6 col-12 wow flipInX">
                     <div class="service">
                         <div class="service__icon">
@@ -256,115 +257,15 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html"> Medical equipment</a>
+                                <a href="single-service.html">{{service.name}}</a>
                             </h5>
-                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem per </p>
+                            <p>{{service.body | truncatechars:75}} </p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
                 <!--// Single Service -->
 
-                <!-- Single Service -->
-                <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                    <div class="service">
-                        <div class="service__icon">
-                            <i class="flaticon-growth"></i>
-                        </div>
-                        <div class="service__content">
-                            <h5>
-                                <a href="single-service.html">Non- pharmaceuticals</a>
-                            </h5>
-                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem per </p>
-                        </div>
-                    </div>
-                </div>
-                <!--// Single Service -->
-
-                <!-- Single Service -->
-                <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                    <div class="service">
-                        <div class="service__icon">
-                            <i class="flaticon-internet"></i>
-                        </div>
-                        <div class="service__content">
-                            <h5>
-                                <a href="single-service.html">Laboratory diagnostics and reagents</a>
-                            </h5>
-                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem per </p>
-                        </div>
-                    </div>
-                </div>
-                <!--// Single Service -->
-
-                <!-- Single Service -->
-                <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                    <div class="service">
-                        <div class="service__icon">
-                            <i class="flaticon-creative"></i>
-                        </div>
-                        <div class="service__content">
-                            <h5>
-                                <a href="single-service.html">Physiotherapy equipment</a>
-                            </h5>
-                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem per </p>
-                        </div>
-                    </div>
-                </div>
-                <!--// Single Service -->
-
-                <!-- Single Service -->
-                <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                    <div class="service">
-                        <div class="service__icon">
-                            <i class="flaticon-hand-shake"></i>
-                        </div>
-                        <div class="service__content">
-                            <h5>
-                                <a href="single-service.html">Consultancy </a>
-                            </h5>
-                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem per </p>
-                        </div>
-                    </div>
-                </div>
-                <!--// Single Service -->
-
-                <!-- Single Service -->
-                <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                    <div class="service">
-                        <div class="service__icon">
-                            <i class="flaticon-risk"></i>
-                        </div>
-                        <div class="service__content">
-                            <h5>
-                                <a href="single-service.html"> Health data/ IT</a>
-                            </h5>
-                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem per </p>
-                        </div>
-                    </div>
-                </div>
-                <!--// Single Service -->
-                 <!-- Single Service -->
-                 <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                    <div class="service">
-                        <div class="service__icon">
-                            <i class="flaticon-risk"></i>
-                        </div>
-                        <div class="service__content">
-                            <h5>
-                                <a href="single-service.html"> Maintenance of equipment</a>
-                            </h5>
-                            <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem per </p>
-                        </div>
-                    </div>
-                </div>
-                <!--// Single Service -->
 
             </div>
         </div>

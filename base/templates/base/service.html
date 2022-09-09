@@ -5,9 +5,10 @@
 {% load static %}
 
 <style>
-    .cr-breadcrumb-area {
+    #cr-breadcrumb-area {
         background-color: rgb(21, 199, 199) !important;
     }
+
     .color--theme {
         color: rgb(21, 199, 199) !important;
     }
@@ -40,7 +41,7 @@
 </style>
 
 <!-- Breadcrumb Area -->
-<div id="cr-breadcrumb-area" class="cr-breadcrumb-area  bg-image--2 section-padding--md" data-overlay="8">
+<div id="funfact-area" class="funfact-area section-padding--lg bg--white bg-image--1" data-overlay="8">
     <div class="container">
         <div class="cr-breadcrumb">
             <div class="cr-breadcrumb__left">
@@ -76,24 +77,20 @@
                             <h3>WE PROVIDE BEST
                                 <span class="color--theme">SERVICES FOR YOU</span>
                             </h3>
-                            <p>perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                laudantium, totam rem
-                                aperiam, eaque
-                                ipsa quae </p>
-                            <p>perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem aperiam eaque
-                                numquam
-                                eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-                                enim ad minima veniam,</p>
-                            <p>perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium totam
-                                rem aperiam eaque
-                                numquam
-                                eius modi tempora incidunt ut labore</p>
+                            <p>We supply hospital equipment, laboratory diagnostics and reagents to both private and
+                                public sectors in Kenya
+                                through our dedicated sales personnel and appointed agents.</p>
+
+                            <p> Our mission focuses on improving the lives of those we serve through providing
+                                compassionate care, quality
+                                equipment and exceptional customer service. We endeavor to add value to our clients and
+                                exceed their expectations
+                                with the services we offer.</p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5 col-md-8 order-1 order-lg-2">
                         <div class="pg-services__thumb wow fadeInRight">
-                            <img src="images/services/sevices-thumb-right.png" alt="services thumb">
+                            <img src="{% static 'images/services/sevices-thumb-right.png' %}" alt="services thumb">
                         </div>
                     </div>
                 </div>
@@ -107,6 +104,7 @@
                 <div class="row mt-30-reverse">
 
                     <!-- Single Service -->
+                    {% for service in services %}
                     <div class="col-lg-4 col-md-6 col-12 wow flipInX">
                         <div class="service">
                             <div class="service__icon">
@@ -114,98 +112,13 @@
                             </div>
                             <div class="service__content">
                                 <h5>
-                                    <a href="single-service.html">INSURANCE CONSULTING</a>
+                                    <a href="single-service.html">{{service.name}}</a>
                                 </h5>
-                                <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium
-                                    totam rem per </p>
+                                <p>{{service.body | truncatechars:75}} </p>
                             </div>
                         </div>
                     </div>
-                    <!--// Single Service -->
-
-                    <!-- Single Service -->
-                    <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                        <div class="service">
-                            <div class="service__icon">
-                                <i class="flaticon-growth"></i>
-                            </div>
-                            <div class="service__content">
-                                <h5>
-                                    <a href="single-service.html">FINANCING PLAN</a>
-                                </h5>
-                                <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium
-                                    totam rem per </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// Single Service -->
-
-                    <!-- Single Service -->
-                    <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                        <div class="service">
-                            <div class="service__icon">
-                                <i class="flaticon-internet"></i>
-                            </div>
-                            <div class="service__content">
-                                <h5>
-                                    <a href="single-service.html">BUSINESS DEAL</a>
-                                </h5>
-                                <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium
-                                    totam rem per </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// Single Service -->
-
-                    <!-- Single Service -->
-                    <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                        <div class="service">
-                            <div class="service__icon">
-                                <i class="flaticon-creative"></i>
-                            </div>
-                            <div class="service__content">
-                                <h5>
-                                    <a href="single-service.html">CAR INSURANCE</a>
-                                </h5>
-                                <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium
-                                    totam rem per </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// Single Service -->
-
-                    <!-- Single Service -->
-                    <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                        <div class="service">
-                            <div class="service__icon">
-                                <i class="flaticon-hand-shake"></i>
-                            </div>
-                            <div class="service__content">
-                                <h5>
-                                    <a href="single-service.html">BUSINESS INSURANCE</a>
-                                </h5>
-                                <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium
-                                    totam rem per </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// Single Service -->
-
-                    <!-- Single Service -->
-                    <div class="col-lg-4 col-md-6 col-12 wow flipInX">
-                        <div class="service">
-                            <div class="service__icon">
-                                <i class="flaticon-risk"></i>
-                            </div>
-                            <div class="service__content">
-                                <h5>
-                                    <a href="single-service.html">INVESMENT PLANING</a>
-                                </h5>
-                                <p>Perspiciatis unde omnis ist natus error sit voluptatem accusantium loremque tium
-                                    totam rem per </p>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                     <!--// Single Service -->
 
                 </div>
