@@ -13,6 +13,12 @@ def home(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
+    products = Product.objects.all()
+    paginator = Paginator(products, 9)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {'services': services, 'blogs': blogs, 'page_obj': page_obj}
     return render(request, 'base/home.html', context)
 
