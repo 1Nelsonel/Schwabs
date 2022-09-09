@@ -4,6 +4,326 @@
 
 {% load static %}
 
+<style>
+    #cr-breadcrumb-area {
+        background-color: rgb(21, 199, 199) !important;
+    }
 
+    .color--theme {
+        color: rgb(21, 199, 199) !important;
+    }
+
+    .video-btn {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .service__icon {
+        color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__header {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__image:before {
+
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .funfact-area:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .feature:before {
+        background: rgb(21, 199, 199) !important;
+    }
+    .cr-btn {
+        background-color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+        color: black !important;
+    }
+    .cr-btn:hover {
+        color: white !important;
+    }
+
+    a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
+</style>
+
+<!-- Breadcrumb Area -->
+<div id="funfact-area" class="funfact-area section-padding--lg bg--white bg-image--1" data-overlay="8">
+    <div class="container">
+        <div class="cr-breadcrumb">
+            <div class="cr-breadcrumb__left">
+                <h2>Service Details</h2>
+                <p>Schwabs Biomedixs ltd</p>
+            </div>
+            <div class="cr-breadcrumb__right">
+                <ul class="cr-breadcrumb__pagination">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>Service Detail</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- Page Service Area -->
+    <section id="pg-services-area" class="cr-section pg-services-area section-padding--xlg">
+
+        <!-- Pg Service Area Top -->
+        <div class="pg-services-area__description">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-xl-6 col-lg-7 order-2 order-lg-1">
+                        <div class="pg-services__details">
+                            
+                            <h3>
+                                <span class="color--theme">{{service.name}}</span>
+                            </h3>
+                            <p>{{service.body}}</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-8 order-1 order-lg-2">
+                        <div class="pg-services__thumb wow fadeInRight">
+                            <img src="{{service.image.url}}" width="600" height="500" alt="services thumb">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// Pg Service Area Top -->
+
+       
+
+    </section>
+    <!--// Page Service Area -->
+
+    <!-- Funfact Area -->
+    <div id="funfact-area" class="funfact-area section-padding--lg bg--white bg-image--1" data-overlay="8">
+        <div class="container">
+            <div class="row">
+
+                <!--  Single Funfact -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="funfact-wrapper">
+                        <div class="funfact">
+                            <span class="funfact-icon">
+                                <i class="pe-7s-look"></i>
+                            </span>
+                            <div class="funfact-content">
+                                <h3><span class="counter">349</span>+</h3>
+                                <h5>Truested Clients</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//  Single Funfact -->
+
+                <!--  Single Funfact -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="funfact-wrapper">
+                        <div class="funfact">
+                            <span class="funfact-icon">
+                                <i class="pe-7s-graph3"></i>
+                            </span>
+                            <div class="funfact-content">
+                                <h3><span class="counter">109</span>+</h3>
+                                <h5>Awards Win</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//  Single Funfact -->
+
+                <!--  Single Funfact -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="funfact-wrapper">
+                        <div class="funfact">
+                            <span class="funfact-icon">
+                                <i class="pe-7s-like"></i>
+                            </span>
+                            <div class="funfact-content">
+                                <h3><span class="counter">459</span>+</h3>
+                                <h5>Project Done</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//  Single Funfact -->
+
+                <!--  Single Funfact -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="funfact-wrapper">
+                        <div class="funfact">
+                            <span class="funfact-icon">
+                                <i class="pe-7s-coffee"></i>
+                            </span>
+                            <div class="funfact-content">
+                                <h3><span class="counter">19</span>+</h3>
+                                <h5>Expert Advisor</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//  Single Funfact -->
+
+            </div>
+        </div>
+    </div>
+    <!--// Funfact Area -->
+
+    <!-- Testimonial Area -->
+    <div id="testimonial-area" class="testimonial-area section-padding--xlg bg--grey">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-9 col-md-10 col-12">
+                    <div class="testimonial text-center">
+
+                        <!-- Testimonial Content -->
+                        <div class="testimonial__content testimonial-content-slider-active">
+
+                            <!-- Testimonial Content Single -->
+                            <div class="testimonial__content__single">
+                                <p>Reachable and flexible in all aspect of Business</p>
+                            </div>
+                            <!--// Testimonial Content Single -->
+
+                            <!-- Testimonial Content Single -->
+                            <div class="testimonial__content__single">
+                                <p>You get value for money with Schwabs biomedixs, best quality products</p>
+                            </div>
+                            <!--// Testimonial Content Single -->
+
+                            <!-- Testimonial Content Single -->
+                            <div class="testimonial__content__single">
+                                <p>Best customer client relation, you are the best.</p>
+                            </div>
+                            <!--// Testimonial Content Single -->
+
+                            <!-- Testimonial Content Single -->
+                            <div class="testimonial__content__single">
+                                <p>you offer friendly and affordable prices for laboratory equipment</p>
+                            </div>
+                            <!--// Testimonial Content Single -->
+
+                            <!-- Testimonial Content Single -->
+                            <div class="testimonial__content__single">
+                                <p>Best service in biomedixs Consultancy</p>
+                            </div>
+                            <!--// Testimonial Content Single -->
+
+                            <!-- Testimonial Content Single -->
+                            <div class="testimonial__content__single">
+                                <p>Best service provider for biomedixs supplies</p>
+                            </div>
+                            <!--// Testimonial Content Single -->
+
+                        </div>
+                        <!--// Testimonial Content -->
+
+                        <!-- Testimonial Author -->
+                        <div class="testimonial__author testimonial-author-slider-active">
+
+                            <!-- Single Author -->
+                            <div class="testimonial__author__single">
+                                <div class="testimonial__author__image">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
+                                </div>
+                                <div class="testimonial__author__description">
+                                    <h6>Kiptoo Kosgei</h6>
+                                    <span>Manager BM Chemistry</span>
+                                </div>
+                            </div>
+                            <!--// Single Author -->
+
+                            <!-- Single Author -->
+                            <div class="testimonial__author__single">
+                                <div class="testimonial__author__image">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
+                                </div>
+                                <div class="testimonial__author__description">
+                                    <h6>Nelson M</h6>
+                                    <span>Africare Health Services</span>
+                                </div>
+                            </div>
+                            <!--// Single Author -->
+
+                            <!-- Single Author -->
+                            <div class="testimonial__author__single">
+                                <div class="testimonial__author__image">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
+                                </div>
+                                <div class="testimonial__author__description">
+                                    <h6>Shon </h6>
+                                    <span>C.E.O MediCare</span>
+                                </div>
+                            </div>
+                            <!--// Single Author -->
+
+                            <!-- Single Author -->
+                            <div class="testimonial__author__single">
+                                <div class="testimonial__author__image">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
+                                </div>
+                                <div class="testimonial__author__description">
+                                    <h6>Henry Sawe</h6>
+                                    <span>Helto Institute</span>
+                                </div>
+                            </div>
+                            <!--// Single Author -->
+
+                            <!-- Single Author -->
+                            <div class="testimonial__author__single">
+                                <div class="testimonial__author__image">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
+                                </div>
+                                <div class="testimonial__author__description">
+                                    <h6>Jane</h6>
+                                    <span>CEO, Siocha Psysio</span>
+                                </div>
+                            </div>
+                            <!--// Single Author -->
+
+                            <!-- Single Author -->
+                            <div class="testimonial__author__single">
+                                <div class="testimonial__author__image">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
+                                </div>
+                                <div class="testimonial__author__description">
+                                    <h6>Tallam</h6>
+                                    <span>Manager, Bricho Healthcare</span>
+                                </div>
+                            </div>
+                            <!--// Single Author -->
+
+                        </div>
+                        <!--// Testimonial Author -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// Testimonial Area -->
+
+    
+
+</main>
+<!-- //Page Conent -->
 
 {% endblock %}

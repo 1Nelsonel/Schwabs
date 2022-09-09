@@ -38,6 +38,18 @@
     .feature:before {
         background: rgb(21, 199, 199) !important;
     }
+    .cr-btn {
+        background-color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+        color: black !important;
+    }
+    .cr-btn:hover {
+        color: white !important;
+    }
+
+    a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
 </style>
 
 <!-- Breadcrumb Area -->
@@ -112,7 +124,7 @@
                             </div>
                             <div class="service__content">
                                 <h5>
-                                    <a href="single-service.html">{{service.name}}</a>
+                                    <a href="{% url 'serviceSingle' service.id %}">{{service.name}}</a>
                                 </h5>
                                 <p>{{service.body | truncatechars:75}} </p>
                             </div>
@@ -215,60 +227,37 @@
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>Reachable and flexible in all aspect of Business</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>You get value for money with Schwabs biomedixs, best quality products</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>Best customer client relation, you are the best.</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>you offer friendly and affordable prices for laboratory equipment</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur
-                                    autodit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                                    sequi nesciunt. Neque
-                                    porro</p>
+                                <p>Best service in biomedixs Consultancy</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
                             <!-- Testimonial Content Single -->
                             <div class="testimonial__content__single">
-                                <p>Parchitecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas sit aspernatur aut
-                                    odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                                    nesciunt. Neque porro</p>
+                                <p>Best service provider for biomedixs supplies</p>
                             </div>
                             <!--// Testimonial Content Single -->
 
@@ -281,11 +270,12 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="images/testimonial/testimonial-author-1.png" alt="testimonial author">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
-                                    <h6>DAVID MILLER</h6>
-                                    <span>President</span>
+                                    <h6>Kiptoo Kosgei</h6>
+                                    <span>Manager BM Chemistry</span>
                                 </div>
                             </div>
                             <!--// Single Author -->
@@ -293,11 +283,12 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="images/testimonial/testimonial-author-2.png" alt="testimonial author">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
-                                    <h6>RAISA MARIYA</h6>
-                                    <span>CEO</span>
+                                    <h6>Nelson M</h6>
+                                    <span>Africare Health Services</span>
                                 </div>
                             </div>
                             <!--// Single Author -->
@@ -305,11 +296,12 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="images/testimonial/testimonial-author-3.png" alt="testimonial author">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
-                                    <h6>SHON SMITH</h6>
-                                    <span>Executive</span>
+                                    <h6>Shon </h6>
+                                    <span>C.E.O MediCare</span>
                                 </div>
                             </div>
                             <!--// Single Author -->
@@ -317,11 +309,12 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="images/testimonial/testimonial-author-1.png" alt="testimonial author">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
-                                    <h6>DAVID MILLER</h6>
-                                    <span>President</span>
+                                    <h6>Henry Sawe</h6>
+                                    <span>Helto Institute</span>
                                 </div>
                             </div>
                             <!--// Single Author -->
@@ -329,11 +322,12 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="images/testimonial/testimonial-author-2.png" alt="testimonial author">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
-                                    <h6>RAISA MARIYA</h6>
-                                    <span>CEO</span>
+                                    <h6>Jane</h6>
+                                    <span>CEO, Siocha Psysio</span>
                                 </div>
                             </div>
                             <!--// Single Author -->
@@ -341,11 +335,12 @@
                             <!-- Single Author -->
                             <div class="testimonial__author__single">
                                 <div class="testimonial__author__image">
-                                    <img src="images/testimonial/testimonial-author-3.png" alt="testimonial author">
+                                    <img src="{% static 'images/testimonial/user.png' %}"
+                                        alt="testimonial author">
                                 </div>
                                 <div class="testimonial__author__description">
-                                    <h6>SHON SMITH</h6>
-                                    <span>Executive</span>
+                                    <h6>Tallam</h6>
+                                    <span>Manager, Bricho Healthcare</span>
                                 </div>
                             </div>
                             <!--// Single Author -->
@@ -360,27 +355,6 @@
     </div>
     <!--// Testimonial Area -->
 
-    <!-- Call To Action Area -->
-    <section class="cta-area section-padding--md bg--grey--light bg--abstruct-mask">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-9 col-lg-10">
-                    <div class="calltoaction text-center">
-                        <h3>NEED HELP FOR YOUR <span class="color--theme">FINANCIAL CONSULTING ?</span>
-                        </h3>
-                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem
-                            aperiam, eaque ipsa Neque.</p>
-                        <div class="calltoaction-button mt-4">
-                            <span class="calltoaction-icon"><i class="flaticon-phone"></i></span>
-                            <a href="callto://+00812548359874">+008 12548 359 874</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--// Call To Action Area -->
 
 </main>
 <!-- //Page Conent -->

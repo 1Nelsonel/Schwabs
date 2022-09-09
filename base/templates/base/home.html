@@ -257,7 +257,7 @@
                         </div>
                         <div class="service__content">
                             <h5>
-                                <a href="single-service.html">{{service.name}}</a>
+                                <a href="{% url 'serviceSingle' service.id %}">{{service.name}}</a>
                             </h5>
                             <p>{{service.body | truncatechars:75}} </p>
                         </div>
@@ -270,9 +270,7 @@
             </div>
         </div>
     </section>
-    <!--// Service Area -->
-
-    
+    <!--// Service Area --> 
 
     <!-- Team Area -->
     <section id="team-area" class="advisor-area bg--white section-padding--xlg">
@@ -289,13 +287,14 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-
+    
                 <!-- Single Advisor -->
                 <div class="col-lg-4 col-md-6 col-12">
                     <figure class="team">
                         <div class="team__header">
                             <div class="team__image">
-                                <img src="{% static 'images/team/kollum.jpg' %}" height="400" width="100%" alt="team member thumb">
+                                <img src="{% static 'images/team/kollum.jpg' %}" height="400" width="100%"
+                                    alt="team member thumb">
                             </div>
                             <div class="team__social">
                                 <ul>
@@ -310,20 +309,21 @@
                         </div>
                         <figcaption class="team__content">
                             <h5>
-                                <a href="team-details.html">Wyman Borer</a>
+                                <a href="team-details.html">Sylvester Kollum</a>
                             </h5>
-                            <p>Chairman</p>
+                            <p>Co Founder</p>
                         </figcaption>
                     </figure>
                 </div>
                 <!--// Single Advisor -->
-
+    
                 <!-- Single Advisor -->
                 <div class="col-lg-4 col-md-6 col-12">
                     <figure class="team">
                         <div class="team__header">
                             <div class="team__image">
-                                <img src="{% static 'images/team/rotich.jpg' %}" height="400" width="100%" alt="team member thumb">
+                                <img src="{% static 'images/team/rotich.jpg' %}" height="400" width="100%"
+                                    alt="team member thumb">
                             </div>
                             <div class="team__social">
                                 <ul>
@@ -338,16 +338,16 @@
                         </div>
                         <figcaption class="team__content">
                             <h5>
-                                <a href="team-details.html">Fernando Adams</a>
+                                <a href="team-details.html">Charles Rotich</a>
                             </h5>
-                            <p>Manager</p>
+                            <p>Co Founder</p>
                         </figcaption>
                     </figure>
                 </div>
                 <!--// Single Advisor -->
-
-                
-
+    
+    
+    
             </div>
         </div>
     </section>
@@ -689,27 +689,7 @@
     </section>
     <!--// Blog Area -->
 
-    <!-- Call To Action Area -->
-    <section class="cta-area section-padding--md bg--grey--light bg--abstruct-mask">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-9 col-lg-10">
-                    <div class="calltoaction text-center">
-                        <h3>NEED HELP FOR YOUR <span class="color--theme">FINANCIAL CONSULTING ?</span>
-                        </h3>
-                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem
-                            aperiam, eaque ipsa Neque.</p>
-                        <div class="calltoaction-button mt-4">
-                            <span class="calltoaction-icon"><i class="flaticon-phone"></i></span>
-                            <a href="callto://+00812548359874">+008 12548 359 874</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--// Call To Action Area -->
+    
 
 </main>
 <!-- //Page Conent -->

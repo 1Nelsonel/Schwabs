@@ -4,6 +4,392 @@
 
 {% load static %}
 
+<style>
+    #cr-breadcrumb-area {
+        background-color: rgb(21, 199, 199) !important;
+    }
 
+    .color--theme {
+        color: rgb(21, 199, 199) !important;
+    }
+
+    .video-btn {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .service__icon {
+        color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__header {
+        background-color: rgb(21, 199, 199) !important;
+    }
+
+    .team__image:before {
+
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .funfact-area:before {
+        background: rgb(21, 199, 199) !important;
+    }
+
+    .feature:before {
+        background: rgb(21, 199, 199) !important;
+    }
+    .cr-btn {
+        background-color: rgb(21, 199, 199) !important;
+        border-color: rgb(21, 199, 199) !important;
+        color: black !important;
+    }
+    .cr-btn:hover {
+        color: white !important;
+    }
+
+    a:hover {
+        color: rgb(21, 199, 199) !important;
+    }
+</style>
+
+<!-- Breadcrumb Area -->
+<div id="funfact-area" class="funfact-area section-padding--lg bg--white bg-image--1" data-overlay="8">
+    <div class="container">
+        <div class="cr-breadcrumb">
+            <div class="cr-breadcrumb__left">
+                <h2>Blogs</h2>
+                <p>Schwabs Biomedixs ltd</p>
+            </div>
+            <div class="cr-breadcrumb__right">
+                <ul class="cr-breadcrumb__pagination">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>About</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Breadcrumb Area -->
+
+<!-- Page Conent -->
+<main class="page-content">
+
+    <!-- BLogs grid -->
+    <div class="cr-section pg-blogs-area section-padding--xlg bg--white">
+        <div class="container">
+
+            <div class="row justify-content-center mt-30-reverse">
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog sticky">
+                        <div class="blog__thumb">
+                            <a href="blog-details.html">
+                                <img src="images/blog/blog-thumbnail-1.jpg" alt="blog thumb">
+                            </a>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">Why Private College Admissions Consulting Has Become the Rule</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog">
+                        <div class="blog__thumb">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <iframe class="embed-responsive-item" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347257536&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">A Step-by-Step Guide to Selling Consulting Services</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog blog--slider-active">
+                        <div class="blog__thumb">
+                            <a href="blog-details.html">
+                                <img src="images/blog/blog-thumbnail-2.jpg" alt="blog thumb">
+                            </a>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">Use These Growth Strategies to Build a 6-Figure Business</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog">
+                        <div class="blog__thumb">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AHJVDFop9sU"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">12 Ways to Increase Your Income This Month</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog">
+                        <div class="blog__thumb">
+                            <a href="blog-details.html">
+                                <img src="images/blog/blog-thumbnail-3.jpg" alt="blog thumb">
+                            </a>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">How to Find the Right Consulting Firm to Grow Your Business</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog sticky">
+                        <div class="blog__thumb">
+                            <a href="blog-details.html">
+                                <img src="images/blog/blog-thumbnail-4.jpg" alt="blog thumb">
+                            </a>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">Why Private College Admissions Consulting Has Become the Rule</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog">
+                        <div class="blog__thumb">
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <iframe class="embed-responsive-item" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347257536&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">A Step-by-Step Guide to Selling Consulting Services</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog blog--slider-active">
+                        <div class="blog__thumb">
+                            <a href="blog-details.html">
+                                <img src="images/blog/blog-thumbnail-5.jpg" alt="blog thumb">
+                            </a>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">Use These Growth Strategies to Build a 6-Figure Business</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+                <!-- Single Blog -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <article class="blog">
+                        <div class="blog__thumb">
+                            <a href="blog-details.html">
+                                <img src="images/blog/blog-thumbnail-7.jpg" alt="blog thumb">
+                            </a>
+                        </div>
+
+                        <div class="blog__content">
+                            <div class="blog__content__body">
+                                <ul class="blog__content__meta">
+                                    <li>1st November 18</li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Business</a>
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="blog-details.html">12 Ways to Increase Your Income This Month</a>
+                                </h4>
+                                <p>Perspiciatis unde omnis iste natus error sit tatem accusantium doloremque laudanti, totam rem...</p>
+                            </div>
+                            <div class="blog__content__footer">
+                                <span class="blog__content__author">By: <a href="blog-right-sidebar.html">Alex Smith</a></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!--// Single Blog -->
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cr-pagination text-center">
+                        <ul>
+                            <li><a href="blog-with-right-sidebar.html"><i class="fa fa-angle-left"></i></a></li>
+                            <li class="active"><a href="blog-with-right-sidebar.html">1</a></li>
+                            <li><a href="blog-with-right-sidebar.html">2</a></li>
+                            <li><a href="blog-with-right-sidebar.html">3</a></li>
+                            <li><a href="blog-with-right-sidebar.html">4</a></li>
+                            <li><a href="blog-with-right-sidebar.html"><i class="fa fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--// BLogs grid -->
+
+    <!-- Call To Action Area -->
+    <section class="cta-area section-padding--md bg--grey--light bg--abstruct-mask">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-10">
+                    <div class="calltoaction text-center">
+                        <h3>NEED HELP FOR YOUR <span class="color--theme">FINANCIAL CONSULTING ?</span>
+                        </h3>
+                        <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                            aperiam, eaque ipsa Neque.</p>
+                        <div class="calltoaction-button mt-4">
+                            <span class="calltoaction-icon"><i class="flaticon-phone"></i></span>
+                            <a href="callto://+00812548359874">+008 12548 359 874</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--// Call To Action Area -->
+
+</main>
+<!-- //Page Conent -->
 
 {% endblock %}

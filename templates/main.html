@@ -31,26 +31,45 @@
 	<!-- Modernizer js -->
 	<script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
 </head>
+<style>
+	.cr-btn {
+		background-color: rgb(21, 199, 199) !important;
+		border-color: rgb(21, 199, 199) !important;
+		color: black !important;
+	}
+
+	.cr-btn:hover {
+		color: white !important;
+	}
+
+	.header__top__info li a:hover {
+		color: rgb(21, 199, 199) !important;
+	}
+
+	.main-navigation>ul>li:hover>a {
+		color: rgb(21, 199, 199) !important;
+	}
+</style>
 
 <body>
-	
+
 
 	<!-- Main wrapper -->
 	<div class="wrapper" id="wrapper">
 
-		
 
-        {% include 'header.html' %}
 
-        {% block content %}
-    
-    
-    
-        {% endblock %}
-    
-        {% include 'footer.html' %}
+		{% include 'header.html' %}
 
-		
+		{% block content %}
+
+
+
+		{% endblock %}
+
+		{% include 'footer.html' %}
+
+
 
 	</div>
 	<!-- //Main wrapper -->
