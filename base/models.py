@@ -86,3 +86,11 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name[0:50]
+
+class Team(models.Model):
+    name = models.CharField(max_length=255)
+    position = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='team/image', null=True)
+    
+    def __str__(self):
+        return self.name[0:50]

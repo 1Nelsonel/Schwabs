@@ -2,11 +2,13 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
-from base.models import Appointment, Contact, Blog, Comment, Service, Product
+from base.models import Appointment, Contact, Blog, Comment, Service, Product, Team
 
 # Create your views here.
 def home(request):
     services = Service.objects.all()
+    teams = Team.objects.all()
+
     blogs = Blog.objects.all()
     paginator = Paginator(blogs, 3)
 
@@ -19,7 +21,7 @@ def home(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-    context = {'services': services, 'blogs': blogs, 'page_obj': page_obj, 'blog_obj': blog_obj}
+    context = {'services': services, 'blogs': blogs, 'page_obj': page_obj, 'blog_obj': blog_obj, 'teams': teams}
     return render(request, 'base/home.html', context)
 
 def contact(request):
