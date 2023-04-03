@@ -10,9 +10,9 @@ urlpatterns = [
     path('appointment/', views.appointment, name='appointment'),
     path('about/', views.about, name='about'),
     path('blog/', views.blog, name='blog'),
-    path('blogSingle/<int:pk>/', views.blogSingle, name='blogSingle'),
+    path('blogSingle/<slug:slug>/', views.blogSingle, name='blogSingle'),
     path('service/', views.service, name='service'),
-    path('serviceSingle/<int:pk>/', views.serviceSingle, name='serviceSingle'),
+    path('serviceSingle/<slug:slug>/', views.serviceSingle, name='serviceSingle'),
     path('product/', views.product, name='product'),
 ]
 urlpatterns += staticfiles_urlpatterns()

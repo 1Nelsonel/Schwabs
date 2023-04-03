@@ -1,9 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 # Create your models here.
 class Service(models.Model):
     name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     image = models.ImageField(upload_to='service/image', null=True)
     body = models.TextField(null=True)
     updated = models.DateTimeField(auto_now=True, null=True)
@@ -14,12 +16,19 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name[0:50]
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
 
 
 class Blog(models.Model):
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     image = models.ImageField(upload_to='blog/image', null=True)
     updated = models.DateTimeField(auto_now=True)
@@ -30,6 +39,13 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title[0:50]
+    
+    def save(self, *args, **kwargs):
+        # Generate slug if it doesn't exist
+        if not self.slug:
+            self.slug = slugify(self.title)
+
+        super(Blog, self).save(*args, **kwargs)
 
 
 class Comment(models.Model):

@@ -124,7 +124,7 @@
                             </div>
                             <div class="service__content">
                                 <h5>
-                                    <a href="{% url 'serviceSingle' service.id %}">{{service.name}}</a>
+                                    <a href="{% url 'serviceSingle' service.slug %}">{{service.name}}</a>
                                 </h5>
                                 <p>{{service.body | truncatechars:75}} </p>
                             </div>

@@ -89,7 +89,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <article class="blog sticky">
                         <div class="blog__thumb">
-                            <a href="{% url 'blogSingle' blog.id %}">
+                            <a href="{% url 'blogSingle' blog.slug %}">
                                 <img src="{{blog.image.url}}" width="100%" height="200" alt="blog thumb">
                             </a>
                         </div>
@@ -102,7 +102,7 @@
                                     </li>
                                 </ul>
                                 <h4>
-                                    <a  href="{% url 'blogSingle' blog.id %}">{{blog.title}}</a>
+                                    <a  href="{% url 'blogSingle' blog.slug %}">{{blog.title}}</a>
                                 </h4>
                                 <p>{{blog.description | truncatechars:75}}</p>
                             </div>

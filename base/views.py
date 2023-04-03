@@ -65,8 +65,8 @@ def service(request):
     context = {'services': services}
     return render(request, 'base/service.html', context)
 
-def serviceSingle(request, pk):
-    service = Service.objects.get(id=pk)
+def serviceSingle(request, slug):
+    service = Service.objects.get(slug=slug)
 
     if request.method == 'POST':
         contact = Contact.objects.create(
@@ -78,7 +78,7 @@ def serviceSingle(request, pk):
         )
 
         messages.success(request, 'Your message has been sent. Thank you!')
-        return redirect('serviceSingle', pk=service.id)
+        return redirect('serviceSingle', slug=service.slug)
 
     context = {'service': service}
     return render(request, 'base/serviceSingle.html', context)
@@ -96,8 +96,8 @@ def blog(request):
     context = {'blogs': blogs, 'services': services, 'comments': comments, 'page_obj': page_obj}
     return render(request, 'base/blog.html', context)
 
-def blogSingle(request, pk):
-    blog = Blog.objects.get(id=pk)
+def blogSingle(request, slug):
+    blog = Blog.objects.get(slug=slug)
     services = Service.objects.all()
     comments = blog.comment_set.all()
     blogs = Blog.objects.all()
@@ -112,7 +112,7 @@ def blogSingle(request, pk):
         )
 
         messages.success(request, 'Comment sent')
-        return redirect('blogSingle', pk=blog.id)
+        return redirect('blogSingle', slug=blog.slug)
 
     context = {'blog': blog, 'services': services, 'comments': comments, 'blogs': blogs}
     return render(request, 'base/blogSingle.html', context)

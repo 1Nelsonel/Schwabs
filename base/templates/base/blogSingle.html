@@ -189,11 +189,11 @@
                             <ul>
                                 {% for blog in blogs %}
                                 <li>
-                                    <a class="widget-recentpost__thumb" href="{% url 'blogSingle' blog.id %}"><img
+                                    <a class="widget-recentpost__thumb" href="{% url 'blogSingle' blog.slug %}"><img
                                             src="{{blog.image.url}}" width="90" height="50" alt="blog thumbnail"></a>
                                     <div class="widget-recentpost__content">
                                         <span class="date">{{blog.created | timesince}} : ago</span>
-                                        <h6><a href="{% url 'blogSingle' blog.id %}">{{blog.title}}</a></h6>
+                                        <h6><a href="{% url 'blogSingle' blog.slug %}">{{blog.title}}</a></h6>
                                     </div>
                                 </li>
                                 {% endfor %}
@@ -206,7 +206,7 @@
                             <h6>Our Services</h6>
                             <ul>
                                 {% for service in services %}
-                                <li><a href="{% url 'serviceSingle' service.id %}">{{service.name}}</a></li>
+                                <li><a href="{% url 'serviceSingle' service.slug %}">{{service.name}}</a></li>
                                 {% endfor %}
                             </ul>
                         </section>
